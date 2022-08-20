@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" >
+        <section>
+          <h2>Linus Torvalds <br> Linux Kernel</h2>
+        </section>
+				<section>
+          <img data-src="./assets/linus.jpg">
+          <h3>Linus Torvalds</h3>
+          <h4>(Finnish Software Engineer Who is the Main Developer of the 'Linux' Operating System)</h4>
+        </section>
+				<section>
+          Linus was born in Helsinki, Finland, the son of journalists Anna and Nils Torvalds, and the grandson of poet Ole Torvalds. 
+          His family belongs to the Swedish-speaking minority (roughly 5 %) of Finland's population. 
+          Torvalds was named after Linus Pauling, the American Nobel Prize-winning chemist, although he prefers to claim he was named after Linus in the Peanuts comic strip. 
+          Both of his parents were campus radicals at the University of Helsinki in the 1960s. His father was a communist who in the mid-1970s spent a year studying in Moscow.
+        </section>
+				<section>
+          <img data-src="./assets/linux.png" width="400px">
+          <br>
+          Linux was initially developed by Linus Torvalds in 1991
+          as an operating system for IBM-compatible personal computers based
+          on the Intel 80386 microprocessor.
+        </section>
+				<section>
+          <h1>What is kernel? </h1><br>
+        </section>
+
+        <section>
+          <img data-src="./assets/whatis.png" width="800px">
+        </section>
+        <section>
+          <ul>
+            <h1>Why Linux?</h1>
+            <li>Open source</li>
+            <li>Anyone can download and modify</li>
+            <li>Very fast and efficient</li>
+          </ul>
+           
+        </section>
+				<section>
+          <ul>
+            <li>
+              Set of code which directly interacts with hardware and allocate
+              manages resources such as CPU time, memory and I/O access.
+              Kernel also contain system calls which provide specific functions.
+            </li>
+            <li>
+              It's a program that runs in Kernel mode
+            </li>
+            <li>
+              CPUs run either in Kernel Mode  or in User Mode.
+            </li>
+            <li>
+              when in User Mode, some parts of RAM can't be adressed, some 
+              instructions can't be executed, and I/O ports can't be accessed.
+            </li>
+            <li>
+              besides running in Kernel mode, kernels have peculiarities: large size,
+              machine dependency,
+              loading into RAM at boot time
+            </li>
+          </ul>
+        </section>
+        <section>
+          <strong>Kernel functional</strong>
+          <section>
+            File System: <br>
+            <ul>
+              <li>
+                It is responsible for storing information on disk and retrieving and updating this information
+              </li>
+              <li>
+                The File System is accessed through system calls such as: open, read, write...
+              </li>
+            </ul>
+            Example: FAT16, FAT32, NTFS, ext2, ext3
+          </section>
+          <section>
+            Device Driver: <br>
+            <ul>
+              <li>One of the purpose of an OS is to hide the system's hardware from user</li>
+              <li>
+                Instead of putting code to manage  the HW controller into every application,
+                the code is kept in the Linux kernel.
+              </li>
+              <li>It abstracts the handling of devices.</li>
+            </ul>
+          </section>
+          <section>
+            Process managament: <br>
+            <ul>
+              <li>The Unix is a time-sharing system</li>
+              <li>Every process is scheduled to run a period of time</li>
+              <li>Kernel creates, manages and deletes the processes</li>
+              <li>Every process (except init) in the system is create as the result of a fork system call</li>
+              <li>the fork system call splits a process into two processes (Parent and child)</li>
+              <li>Each process has a unique identifier</li>
+            </ul>
+          </section>
+          <section>
+            Memory Managament:
+            <ul>
+              <li>Physical memory is limited</li>
+              <li>Virtual memory is developed to overcome this limitation such as:
+                Large Address space, Memory mapping, Shared Virtual memory
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <img data-src="./assets/lin.jpg" width="800px">
+        </section>
+
+				<section ">
+          <h3>THANKS FOR ATTENTION</h3>
+        </section>
+        
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+        //controls: false,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
